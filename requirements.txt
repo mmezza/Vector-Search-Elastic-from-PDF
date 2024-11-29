@@ -1,0 +1,3 @@
+Elasticsearch cluster version 8.15 and above
+Elastic Enterprise licencese level
+Gemini #it could be any supported LLM. I used Gemini in this code
