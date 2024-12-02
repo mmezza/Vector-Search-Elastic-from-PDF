@@ -1,3 +1,4 @@
 Elasticsearch cluster version 8.15 and above
 Elastic Enterprise licencese level
+a Machine Learning node
 Gemini #it could be any supported LLM. I used Gemini in this code
