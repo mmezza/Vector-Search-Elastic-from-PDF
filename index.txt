@@ -1,0 +1,114 @@
+{
+  "search-myindex-pt": {
+    "mappings": {
+      "properties": {
+        "attachment": {
+          "properties": {
+            "author": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "content": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "content_length": {
+              "type": "long"
+            },
+            "content_type": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "creator_tool": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "date": {
+              "type": "date"
+            },
+            "format": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "language": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "metadata_date": {
+              "type": "date"
+            },
+            "modified": {
+              "type": "date"
+            }
+          }
+        },
+        "filename": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "text_field": {
+          "properties": {
+            "is_truncated": {
+              "type": "boolean"
+            },
+            "model_id": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "predicted_value": {
+              "type": "dense_vector",
+              "dims": 1024,
+              "index": true,
+              "similarity": "cosine",
+              "index_options": {
+                "type": "int8_hnsw",
+                "m": 16,
+                "ef_construction": 100
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
